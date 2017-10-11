@@ -20,7 +20,7 @@ function getCommits(el) {
   req.open("GET", 'https://api.github.com/repos/' + name + '/commits')
   req.send()
 }
-function showCommits() {
+function displayCommits() {
   const commits = JSON.parse(this.responseText)
   const commitsList = `<ul>${commits.map(commit => '<li><strong>' + commit.author.login + '</strong> - ' + commit.commit.message + '</li>').join('')}</ul>`
   document.getElementById("commits").innerHTML = commitsList
