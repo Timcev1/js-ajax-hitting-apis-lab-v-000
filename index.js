@@ -15,6 +15,7 @@ function getRepositories() {
 function displayBranches(){
   const branches = JSON.parse(this.responseText)
   const commitsList = `<ul>${commits.map(commit => '<li><strong>' + branch.name + '</strong>' + '</li>').join('')}</ul>`
+  document.getElementById("details").innerHTML = branchesList
 }
 function getBranches(el){
   let branch = el.dataset.repository
