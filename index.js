@@ -30,7 +30,7 @@ function getBranches(el){
 function getCommits(el) {
   const name = el.dataset.repo
   const req = new XMLHttpRequest()
-  req.addEventListener("load", showCommits)
+  req.addEventListener("load", displayCommits)
   req.open("GET", 'https://api.github.com/repos/' + name + '/commits')
   req.send()
 }
