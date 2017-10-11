@@ -20,6 +20,7 @@ function getBranches(el){
   req.open("GET", `${'https://api.github.com/repos/' +user+ '/' +branch+'/branches'}`)
   req.send()
 }
+
 function getCommits(el) {
   const name = el.dataset.repo
   const req = new XMLHttpRequest()
