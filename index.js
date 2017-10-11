@@ -19,11 +19,11 @@ function displayBranches(){
 }
 
 function getBranches(el){
-  let el = el.dataset.repository
+  let branch = el.dataset.repository
   let user = document.getElementById('username').value
   const req = new XMLHttpRequest()
   req.addEventListener("load", displayBranches);
-  req.open("GET", `${'https://api.github.com/repos/' +user+ '/' + branch +'/branches'}`)
+  req.open("GET", `${'https://api.github.com/repos/' +user+ '/' +branch+'/branches'}`)
   req.send()
 }
 
