@@ -12,6 +12,9 @@ function getRepositories() {
   req.send()
 }
 
+function getBranches(){
+  
+}
 function getCommits(el) {
   const name = el.dataset.repo
   const req = new XMLHttpRequest()
